@@ -1,27 +1,20 @@
-# Container
+1. 按教程上直接把前面在child1项目中打包好的elements.js引入到html中，然后我正常的肯定是想在app.component.html中使用。会报错, 因为我们启动走的是ng serve，最好还是放到angular.json文件中引用
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+```
+// angular.json
+ "scripts": [
+      "src/assets/child1/elements.js"
+  ]
 
-## Development server
+// app.component.html
+<patient-list></patient-list>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
 
-## Code scaffolding
+接下来：
+  - 路由如何动态引用js 还有路由复用
+  - http service是否能用
+  - 对于angular + react 之类的不同框架，有种single-SPA做法，参考的链接里面，有提到过package包的方式，不太推荐，就是更新比较麻烦，相比推荐直接使用http://example/elements.js 这样直接用地址的方式，每次提交分支自动更新js
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  
