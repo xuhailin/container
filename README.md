@@ -11,10 +11,4 @@
 
 ```
 
-接下来：
-  - 路由如何动态引用js 还有路由复用
-  - http service是否能用
-  - 对于angular + react 之类的不同框架，有种single-SPA做法，参考的链接里面，有提到过package包的方式，不太推荐，就是更新比较麻烦，相比推荐直接使用http://example/elements.js 这样直接用地址的方式，每次提交分支自动更新js
-
-
-  
+2. 路由这块问题可多了，建议不要在容器层去操作web component的内部路由
